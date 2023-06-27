@@ -1,0 +1,36 @@
+{
+  "name": "music-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "npx parcel ./public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drkspark/Music-App.git"
+  },
+  "keywords": [
+    "music",
+    "reactJS",
+    "JS"
+  ],
+  "author": "drkspark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drkspark/Music-App/issues"
+  },
+  "homepage": "https://github.com/drkspark/Music-App#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "browserlist": [
+    "last 2 version"
+  ]
+}
