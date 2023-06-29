@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    border: 0;
+    color: white;
+}
+
+body{
+    background-color: #03091c;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.rounded-logo {
+    border-radius: 65%;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.footer-div > div {
+    border: 2px solid #1d4ed8;
+    border-radius: 15px;
+    max-width: 600px;
+    padding: 7px 20px;
+    font-family:  Courier;
+}
+
+.socials {
+    text-decoration: none;
+    color: #0b4cc2;
+}

@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Body from "./Components/Body";
 
 export default function App() {
     return (
-        <h1>
-            Hello World
-        </h1>
-    )
+        <>
+            <Header />
+            <Body />
+            <Footer />
+        </>
+    );
 }
