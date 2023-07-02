@@ -39,3 +39,23 @@ body{
     text-decoration: none;
     color: #0b4cc2;
 }
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu li:not(:first-child) {
+    font-size: 25px;
+    margin-left: 20px; 
+  }
+  
+  .menu li:first-child {
+    font-size: 25px;
+    padding-left: 30px;
+    padding-right: 1000px;
+  }
+  .menu li:hover {
+    color: rgb(0, 255, 115);
+  }
