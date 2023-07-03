@@ -4,11 +4,11 @@ export default function Navigation_menu() {
                 <br></br>
             <nav>
         <ul className="menu">
-            <li><a href="#">Play</a></li>
-            <li><a href="#">Room</a></li>
-            <li><a href="#">Playlist</a></li>
-            <li><a href="#">Shuffle</a></li>
-            <li><a href="#">Loop</a></li>
+            <li><button>Play</button></li>
+            <li><button>PlayList</button></li>
+            <li><button>Shuffle</button></li>
+            <li><button>Loop</button></li>
+            <li><button>Room</button></li>
         </ul>
     </nav>
     <br>
