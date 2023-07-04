@@ -39,3 +39,32 @@ body{
     text-decoration: none;
     color: #0b4cc2;
 }
+
+.card-img {
+    width: 230px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.tracks {
+    padding: 20px;
+    padding-bottom: -20px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto; 
+    /* Overflow-x is used to get Scrool bar*/
+}
+
+.bottom-left {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    bottom: 45px;
+    left: 5px;
+    --tw-bg-opacity: 1;
+    background-color: (3 9 28 / var(--tw-bg-opacity));
+    z-index: auto;
+}
