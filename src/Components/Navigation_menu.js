@@ -1,6 +1,6 @@
 export default function Navigation_menu() {
     return(
-    <div className='tracks'>
+    <div className='navmenu'>
                 <br></br>
             <nav>
         <ul className="menu">

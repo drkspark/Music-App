@@ -70,14 +70,40 @@ cursor: pointer;
 .frames{
 display: flex;
 }
-
-.cards img{
+.card-img {
+    width: 230px;
     height: 200px;
-    width: 200px;
+    border-radius: 15px;
+    margin: 10px;
 }
-.cards{
-    padding: 10px;
+
+.tracks {
+    padding: 20px;
+    padding-bottom: -20px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto; 
+    /* Overflow-x is used to get Scrool bar*/
 }
-.pic_1{
-    padding-left: 40px;
+.effects {
+    padding: 20px;
+    padding-bottom: -20px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto; 
+    /* Overflow-x is used to get Scrool bar*/
+}
+
+.bottom-left {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    bottom: 45px;
+    left: 5px;
+    --tw-bg-opacity: 1;
+    background-color: (3 9 28 / var(--tw-bg-opacity));
+    z-index: auto;
 }
