@@ -1,5 +1,9 @@
-import Card from "./Card";
+
+import Navigation_menu from "./navigation_menu";
+import Card from "./card";
 import { CardData } from "../constants";
+import { EffectData } from "../effectsconstants";
+
 
 console.log(CardData);
 export default function Body() {
@@ -14,7 +18,16 @@ export default function Body() {
                     />)
                 })}
             </div>
-            <div className='effects'>Here we will have Effect Cards</div>
-        </div>
+            <div className='effects'>
+                {EffectData.map((card, id)=>{
+                    return(<Card
+                    key={id}
+                    title={card.title}
+                    img_url={card.url}
+                    
+                    />)
+                })}
+            </div>
+            </div>
     );
-}
+};

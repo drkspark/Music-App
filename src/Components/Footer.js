@@ -11,7 +11,10 @@ export default function Footer() {
                         drkspark
                     </a>
                     &nbsp;and&nbsp;
-                    <a className='socials'>Abhinay</a>
+                    <a className='socials'
+                    href='https://github.com/banothabhinay'
+                    >
+                        Abhinay</a>
                 </h2>
             </div>
         </div>
