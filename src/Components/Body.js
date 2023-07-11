@@ -2,9 +2,11 @@ import Navigation from "./NavigationMenu";
 import Card from "./Card";
 import { CardData } from "../Constants/constants";
 import { EffectData } from "../Constants/effectsconstants";
+import React, { useState } from "react";
 
-console.log(CardData);
+// console.log(CardData);
 export default function Body() {
+   
     return (
         <div className='body'>
             <Navigation />
@@ -16,9 +18,11 @@ export default function Body() {
                             key={idx}
                             title={card.title}
                             img_url={card.url}
+                            sound_track={card.sound_track}
                         />
                     );
                 })}
+                
             </div>
             <div className='heading'>Effect</div>
             <div className='effects'>
@@ -28,6 +32,7 @@ export default function Body() {
                             key={id}
                             title={card.title}
                             img_url={card.url}
+                            sound_track={card.effect_track}
                         />
                     );
                 })}
