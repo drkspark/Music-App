@@ -55,6 +55,16 @@ body{
     overflow-x: auto; 
     /* Overflow-x is used to get Scrool bar*/
 }
+.effects{
+    
+        padding: 20px;
+        padding-bottom: -20px;
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+        overflow-x: auto; 
+        /* Overflow-x is used to get Scrool bar*/
+}
 
 .bottom-left {
     text-align: center;
