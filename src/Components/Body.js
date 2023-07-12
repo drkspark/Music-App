@@ -4,13 +4,18 @@ import { CardData } from "../Constants/constants";
 import { EffectData } from "../Constants/effectsconstants";
 import React, { useState } from "react";
 
-// console.log(CardData);
+import Navigation_menu from "./Navigation_menu";
+import Card from "./card";
+import { CardData } from "../constants";
+import { EffectData } from "../effectsconstants";
+
+
+console.log(CardData);
 export default function Body() {
    
     return (
         <div className='body'>
-            <Navigation />
-            <div className='heading'>Sound</div>
+            <Navigation_menu/>
             <div className='tracks'>
                 {CardData.map((card, idx) => {
                     return (
