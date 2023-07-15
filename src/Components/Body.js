@@ -1,13 +1,8 @@
 import Navigation from "./NavigationMenu";
-import Card from "./Card";
+import Card from "./card";
 import { CardData } from "../Constants/constants";
 import { EffectData } from "../Constants/effectsconstants";
 import React, { useState } from "react";
-
-import Navigation_menu from "./Navigation_menu";
-import Card from "./card";
-import { CardData } from "../constants";
-import { EffectData } from "../effectsconstants";
 
 
 console.log(CardData);
@@ -15,7 +10,7 @@ export default function Body() {
    
     return (
         <div className='body'>
-            <Navigation_menu/>
+            <Navigation/>
             <div className='tracks'>
                 {CardData.map((card, idx) => {
                     return (

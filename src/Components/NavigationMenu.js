@@ -1,4 +1,4 @@
-export default function Navigation_menu() {
+export default function Navigation() {
     return(
     <div className='navmenu'>
                 <br></br>
