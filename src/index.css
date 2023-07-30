@@ -68,15 +68,22 @@ body{
     outline: none;
     cursor: pointer;
   }
-.card-img {
+.card-img{
     width: 230px;
     height: 200px;
     border-radius: 15px;
     margin: 10px;
     cursor: pointer;
 }
-
-.tracks, .effects {
+.card-imgg{
+    width: 230px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid blue;
+}
+.tracks{
     padding: 20px;
     padding-bottom: -20px;
     display: flex;
