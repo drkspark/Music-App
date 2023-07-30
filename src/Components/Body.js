@@ -7,13 +7,16 @@ const rim2='card-imgg';
 const rim1='card-img';
 
 export default function Body() {
+
     const [ix,setIx]=useState(-1);
     const [idxeffect,setIdxeffect]=useState(-1);
+
     const [song, setSong] = useState();
     const [playing, setPlaying] = useState(false);
 
     const [effect, setEffect] = useState();
     const [effectPlaying, setEffectPlaying] = useState(false);
+
     const handleRim=(idg)=>{
             setIx(idg);
             
@@ -63,7 +66,6 @@ export default function Body() {
     };
 
 
-
     return (
         <div className='body'>
             <Navigation playing={playing === true} pause={pause} />
@@ -76,13 +78,12 @@ export default function Body() {
                             title={card.title}
                             img_url={card.url}
                             play={() => {
+
                                 songPlayer(card.sound_track,idx);
                             }}
                             cname={
                             ix===idx?rim2:rim1
                             }
-                            
-                            
                         />
                     );
                 })}
@@ -102,7 +103,6 @@ export default function Body() {
                             sound_track={card.effect_track}
                             play={() => {
                                 effectPlayer(card.effect_track,id);
-                               
                             }}
                         />
                     );
