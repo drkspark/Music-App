@@ -1,108 +1,94 @@
-import Navigation from "./NavigationMenu";
+import Navigation from "./Navigation";
 import Card from "./Card";
-import { CardData } from "../Constants/constants";
-import { EffectData } from "../Constants/effectsconstants";
-import React, { useEffect, useLayoutEffect, useState } from "react";
-const rim2='card-imgg';
-const rim1='card-img';
+import { MusicCardData } from "../Constants/musicTracks";
+import { EffectCardData } from "../Constants/effectTracks";
+import React, { useState } from "react";
 
 export default function Body() {
+    const [selectedMusicIndex, setSelectedMusicIndex] = useState(-1);
+    const [selectedEffectIndex, setSelectedEffectIndex] = useState(-1);
 
-    const [ix,setIx]=useState(-1);
-    const [idxeffect,setIdxeffect]=useState(-1);
-
-    const [song, setSong] = useState();
-    const [playing, setPlaying] = useState(false);
+    const [music, setMusic] = useState();
+    const [musicPlaying, setMusicPlaying] = useState(false);
 
     const [effect, setEffect] = useState();
     const [effectPlaying, setEffectPlaying] = useState(false);
 
-    const handleRim=(idg)=>{
-            setIx(idg);
-            
-        };
-        const handleRimeffect=(idgg)=>{
-            setIdxeffect(idgg);
-            
-        };
-        const pause = () => {
-            setPlaying(false);
-            setIx(-1);
-        };
-    const songPlayer = (sound_track,idxplay) => {
-        if (playing && song != sound_track) {
-            handleRim(idxplay);
-            setSong(sound_track);
-           
-        } else if (playing === false) {
-            setSong(sound_track);
-            handleRim(idxplay);
-            setPlaying(true);
-           
-            
+    const pause = () => {
+        setMusicPlaying(false);
+        setSelectedMusicIndex(-1);
+    };
+
+    const songPlayer = (sound_track, indexPlaying) => {
+        if (musicPlaying && music != sound_track) {
+            setMusic(sound_track);
+            setSelectedMusicIndex(indexPlaying);
+        } else if (musicPlaying === false) {
+            setMusic(sound_track);
+            setMusicPlaying(true);
+            setSelectedMusicIndex(indexPlaying);
         } else {
-            setSong();
-            setPlaying(false);
-            handleRim(-1);
+            setMusic();
+            setMusicPlaying(false);
+            setSelectedMusicIndex(-1);
         }
     };
 
-    
-    const effectPlayer = (effect_track,ideffect) => {
+    const effectPlayer = (effect_track, indexPlaying) => {
         if (effectPlaying && effect != effect_track) {
             setEffect(effect_track);
-            handleRimeffect(ideffect);
-
+            setSelectedEffectIndex(indexPlaying);
         } else if (effectPlaying === false) {
             setEffect(effect_track);
             setEffectPlaying(true);
-            handleRimeffect(ideffect);
-            
+            setSelectedEffectIndex(indexPlaying);
         } else {
             setEffect();
             setEffectPlaying(false);
-            handleRimeffect(-1);
+            setSelectedEffectIndex(-1);
         }
     };
 
-
     return (
         <div className='body'>
-            <Navigation playing={playing === true} pause={pause} />
+            <Navigation musicPlaying={musicPlaying === true} pause={pause} />
             <div className='heading'>Sound</div>
             <div className='tracks'>
-                {CardData.map((card, idx) => {
+                {MusicCardData.map((card, index) => {
                     return (
                         <Card
-                            key={idx}
+                            key={index}
                             title={card.title}
                             img_url={card.url}
                             play={() => {
-
-                                songPlayer(card.sound_track,idx);
+                                songPlayer(card.sound_track, index);
                             }}
                             cname={
-                            ix===idx?rim2:rim1
+                                selectedMusicIndex === index
+                                    ? "card-selected"
+                                    : "card"
                             }
                         />
                     );
                 })}
             </div>
-            {playing && <audio src={song} autoPlay />}
+            {musicPlaying && <audio src={music} autoPlay />}
             <div className='heading'>Effect</div>
             <div className='effects'>
-                {EffectData.map((card, id) => {
+                {EffectCardData.map((card, id) => {
                     return (
                         <Card
                             key={id}
                             title={card.title}
                             img_url={card.url}
                             cname={
-                                idxeffect===id?rim2:rim1
-                                }
+                                selectedEffectIndex === id
+                                    ? "card-selected"
+                                    : "card"
+                            }
                             sound_track={card.effect_track}
                             play={() => {
-                                effectPlayer(card.effect_track,id);
+                                effectPlayer(card.effect_track, id);
                             }}
                         />
                     );

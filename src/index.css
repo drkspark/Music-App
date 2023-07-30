@@ -68,14 +68,14 @@ body{
     outline: none;
     cursor: pointer;
   }
-.card-img{
+.card{
     width: 230px;
     height: 200px;
     border-radius: 15px;
     margin: 10px;
     cursor: pointer;
 }
-.card-imgg{
+.card-selected{
     width: 230px;
     height: 200px;
     border-radius: 15px;

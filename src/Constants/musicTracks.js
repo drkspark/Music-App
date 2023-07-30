@@ -4,14 +4,14 @@ import img3 from "../assets/backgroud/3.gif";
 import img4 from "../assets/backgroud/4.gif";
 import img5 from "../assets/backgroud/5.gif";
 
-// We need to specify the  url:  before non-code imports     
+// We need to specify the  url:  before non-code imports
 import track1 from "url:../assets/sound/track/silent-wood.mp3";
 import track2 from "url:../assets/sound/track/Lost-and-Found.mp3";
 import track3 from "url:../assets/sound/track/Ghostrifter-Official-Celestia.mp3";
 import track4 from "url:../assets/sound/track/Otjanbird-Pt.mp3";
 import track5 from "url:../assets/sound/track/Crescent-Moon.mp3";
 
-export const CardData = [
+export const MusicCardData = [
     {
         url: img1,
         title: "Silent Wood",

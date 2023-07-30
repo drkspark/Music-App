@@ -13,7 +13,7 @@ import track4 from "url:../assets/sound/effect/ocean-wave.mp3";
 import track5 from "url:../assets/sound/effect/rain.mp3";
 import track6 from "url:../assets/sound/effect/urban.mp3";
 
-export const EffectData = [
+export const EffectCardData = [
     {
         url: pic1,
         title: "fire",
