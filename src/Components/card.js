@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-// Naming Convention: CardMember, CardBody Camel Case
-
 export default function Card(props) {
     const { title, img_url, cname, play } = props;
 
